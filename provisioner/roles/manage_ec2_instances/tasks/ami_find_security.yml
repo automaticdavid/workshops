@@ -30,6 +30,9 @@
           architecture: "{{ ec2_info['qradar']['architecture'] }}"
       register: qradar_amis
 
+    - debug:
+        var: qradar_amis
+
     - name: save ami for qradar
       set_fact:
         qradar_ami: >
